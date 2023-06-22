@@ -1,5 +1,5 @@
 <?php
-$url = "http://localhost/ArTeM01-043/alqulartemis/fullStack/apiRest/controllers/Cliente.php?op=GetAll";
+$url = "http://localhost/SkylAb-147/alqulartemis/fullStack/apiRest/controllers/Cliente.php?op=GetAll";
 $curl = curl_Init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -9,7 +9,7 @@ curl_close($curl);
 ?>
 <?php
     include_once("new.php");
-    include_once("edit.php");
+    
 ?>
 
 <table class="table table-head-fixed text-nowrap">
@@ -52,3 +52,9 @@ curl_close($curl);
                     ?>
                   </tbody>
 </table>
+
+<?php
+
+include_once("edit.php");
+
+?>

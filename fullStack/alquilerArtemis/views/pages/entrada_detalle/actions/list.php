@@ -1,10 +1,29 @@
 <?php
-$url = "http://localhost/ArTeM01-043/alqulartemis/fullStack/apiRest/controllers/Entrada_Detalle.php?op=GetAll";
+$url = "http://localhost/SkylAb-147/alqulartemis/fullStack/apiRest/controllers/Entrada_Detalle.php?op=GetAll";
 $curl = curl_Init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $output = json_decode(curl_exec($curl));
 curl_close($curl);
+
+function Alquileres()
+{
+  try {
+    $conectar = new PDO("mysql:host=localhost;dbname=AlquilerArtemis", "campus", "campus2023");
+    $sql = ("SELECT Entrada_Detalle.Entrada_Detalle_ID, Entrada.Hora_Entrada, Productos.Nombre_Productos, Obra.Nombre_Obra FROM Entrada_Detalle
+    INNER JOIN Entrada ON  Entrada_Detalle.Entrada_ID = Entrada.Entrada_ID
+    INNER JOIN Productos ON Entrada_Detalle.Productos_ID = Productos.Productos_ID 
+    INNER JOIN Obra ON  Entrada_Detalle.Obra_ID = Obra.Obra_ID");
+    $stm = $conectar->prepare($sql);
+    $stm->execute();
+    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+    $conectar = null;
+    return $result;
+  } catch (Exception $e) {
+    return $e->getMessage();
+  }
+}
+
 
 ?>
 <?php
@@ -12,6 +31,33 @@ curl_close($curl);
 ?>
 
 <table class="table table-head-fixed text-nowrap">
+<?php
+  
+  $results = Alquileres();
+
+  $entrada = array();
+  $product = array();
+  $obra = array();
+  foreach($results as $row){ 
+    array_push($entrada, $row['Hora_Entrada']);
+  
+  }
+  $x=1;
+
+  foreach($results as $rowsw){ 
+    array_push($product, $rowsw['Nombre_Productos']);
+  
+  }
+  $a=1;
+
+  foreach($results as $roww){ 
+    array_push($obra, $roww['Nombre_Obra']);
+  
+  }
+  $b=1;
+
+  
+?>
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -30,12 +76,20 @@ curl_close($curl);
                     <?php
                     foreach ($output as $out)
                         {
+                          $entradas = $x-1;
+                          $x++;
+
+                          $products = $a-1;
+                          $a++;
+
+                          $obras = $b-1;
+                          $b++;
                     ?>
                     <tr>
                       <td><?php echo $out->Entrada_Detalle_ID; ?></td>
-                      <td><?php echo $out->Entrada_ID; ?></td>
-                      <td><?php echo $out->Productos_ID; ?></td>
-                      <td><?php echo $out->Obra_ID; ?></td>
+                      <td><?php echo $entrada[$entradas]; ?></td>
+                      <td><?php echo $product[$products]; ?></td>
+                      <td><?php echo $obra[$obras]; ?></td>
                       <td><?php echo $out->Entrada_Cantidad; ?></td>
                       <td><?php echo $out->Entrada_Cantidad_Propia; ?></td>
                       <td><?php echo $out->Entrada_Cantidad_Subaquilada; ?></td>

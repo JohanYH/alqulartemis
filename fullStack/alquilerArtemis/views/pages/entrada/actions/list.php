@@ -1,22 +1,68 @@
 <?php
-$url = "http://localhost/ArTeM01-043/alqulartemis/fullStack/apiRest/controllers/Entrada.php?op=GetAll";
+$url = "http://localhost/SkylAb-147/alqulartemis/fullStack/apiRest/controllers/Entrada.php?op=GetAll";
 $curl = curl_Init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $output = json_decode(curl_exec($curl));
 curl_close($curl);
 
+function Alquileres()
+{
+  try {
+    $conectar = new PDO("mysql:host=localhost;dbname=AlquilerArtemis", "campus", "campus2023");
+    $sql = ("SELECT Entrada.Entrada_ID, Alquiler.Fecha_Salida, Empleado.Nombre_Empleado, Cliente.Nombre_Cliente FROM Entrada
+    INNER JOIN Alquiler ON Entrada.Alquiler_ID = Alquiler.Alquiler_ID
+    INNER JOIN Empleado ON Entrada.Empleado_ID = Empleado.Empleado_ID 
+    INNER JOIN Cliente ON Entrada.Cliente_ID = Cliente.Cliente_ID");
+    $stm = $conectar->prepare($sql);
+    $stm->execute();
+    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+    $conectar = null;
+    return $result;
+  } catch (Exception $e) {
+    return $e->getMessage();
+  }
+}
+
+
 ?>
 <?php
-    include_once("new.php");
+    include("new.php");
 ?>
 
 <table class="table table-head-fixed text-nowrap">
+<?php
+  
+  $results = Alquileres();
+
+  $alquiler = array();
+  $employe = array();
+  $client = array();
+  foreach($results as $row){ 
+    array_push($alquiler, $row['Fecha_Salida']);
+  
+  }
+  $x=1;
+
+  foreach($results as $rowsw){ 
+    array_push($employe, $rowsw['Nombre_Empleado']);
+  
+  }
+  $a=1;
+
+  foreach($results as $roww){ 
+    array_push($client, $roww['Nombre_Cliente']);
+  
+  }
+  $b=1;
+
+  
+?>
                   <thead>
                     <tr>
                       <th>ID</th>
                       <th>Alquiler</th>
-                      <th>Entrada</th>
+                      <th>Empleado</th>
                       <th>Cliente</th>
                       <th>Fecha Entrada</th>
                       <th>Hora Entrada</th>
@@ -29,12 +75,21 @@ curl_close($curl);
                     <?php
                     foreach ($output as $out)
                         {
+
+                          $alquileres = $x-1;
+                          $x++;
+
+                          $employes = $a-1;
+                          $a++;
+
+                          $clients = $b-1;
+                          $b++;
                     ?>
                     <tr>
                       <td><?php echo $out->Entrada_ID; ?></td>
-                      <td><?php echo $out->Alquiler_ID; ?></td>
-                      <td><?php echo $out->Empleado_ID; ?></td>
-                      <td><?php echo $out->Cliente_ID; ?></td>
+                      <td><?php echo $alquiler[$alquileres]; ?></td>
+                      <td><?php echo $employe[$employes]; ?></td>
+                      <td><?php echo $client[$clients]; ?></td>
                       <td><?php echo $out->Fecha_Entrada; ?></td>
                       <td><?php echo $out->Hora_Entrada; ?></td>
                       <td><?php echo $out->Observaciones; ?></td>

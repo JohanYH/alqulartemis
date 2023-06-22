@@ -6,7 +6,7 @@ ini_set("display_startup_errors", 1);
 error_reporting(E_ALL);
 
 if (isset($_POST['Cliente'])) {
-    $url = "http://localhost/ArTeM01-043/alqulartemis/fullStack/apiRest/controllers/Cliente.php?op=Insert";
+    $url = "http://localhost/SkylAb-147/alqulartemis/fullStack/apiRest/controllers/Cliente.php?op=Insert";
     $data = array(
         'Nombre_Cliente' => $_POST['Nombre_Cliente'], 
         'Telefono_Cliente' => $_POST['Telefono_Cliente'],
@@ -27,6 +27,9 @@ if (isset($_POST['Cliente'])) {
 ?>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Crear Cliente
+</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Detalles
 </button>
 
 <!-- Modal -->

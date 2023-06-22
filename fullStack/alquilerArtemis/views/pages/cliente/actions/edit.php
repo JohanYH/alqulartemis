@@ -1,19 +1,19 @@
 <?php 
 if (isset($_POST['Editar'])) {
-  $url = "http://localhost/Alquilartemis/apirest/controllers/Cliente.php?op=GetId";
+  $url = "http://localhost/SkylAb-147/alqulartemis/fullStack/apiRest/controllers/Alquiler_Detalle.php?op=GetId";
   $data = array(
       'Cliente_ID' => $_POST['EditarCliente']
   );
   
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+  $customer = curl_init();
+  curl_setopt($customer, CURLOPT_URL, $url);
+  curl_setopt($customer, CURLOPT_CUSTOMREQUEST, "POST");
+  curl_setopt($customer, CURLOPT_POSTFIELDS, json_encode($data));
+  curl_setopt($customer, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($customer, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
   
-  $response = curl_exec($ch);
-  curl_close($ch);
+  $response = curl_exec($customer);
+  curl_close($customer);
   
   $clientes = json_decode($response, true);
   $cliente = $clientes[0];
@@ -35,7 +35,7 @@ if (isset($_POST['Editar'])) {
 <?php } ?>
 <?php
 if (isset($_POST['editarCliente'])) {
-    $url = "http://localhost/Alquilartemis/apirest/controllers/Cliente.php?op=Update";
+    $url = "http://localhost/SkylAb-147/alqulartemis/fullStack/apiRest/controllers/Alquiler_Detalle.php?op=Update";
     $data = array(
         'Cliente_ID' => $_POST['editar_id'],
         'Nombre_Cliente' => $_POST['Nombre_Cliente'], 
