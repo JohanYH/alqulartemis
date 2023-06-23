@@ -58,7 +58,7 @@ $results2=json_decode(curl_exec($curl));
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo cliente</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Entrada Detalle</h1>
         <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body text-left">

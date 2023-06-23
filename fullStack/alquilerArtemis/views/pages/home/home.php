@@ -35,7 +35,7 @@
                 </div>
               </div>
               <div class="card-body">
-                Start creating your amazing application!
+                <img src="casa.jpg" alt="">
               </div>
               <!-- /.card-body -->
               <div class="card-footer">

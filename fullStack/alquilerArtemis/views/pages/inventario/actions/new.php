@@ -39,14 +39,14 @@ $results=json_decode(curl_exec($curl));
 
 ?>
 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Crear Alquiler
+  Crear Inventario
 </button>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo cliente</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Inventario</h1>
         <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body text-left">
