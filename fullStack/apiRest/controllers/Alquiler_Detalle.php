@@ -38,7 +38,7 @@ switch ($_GET["op"]){
          
     case 'Update':
         $datos = $AlquilerDetalles->update_Alquiler_Detalle($body['Alquiler_Detalle_ID'],$body['Fecha_Salida'], $body['Nombre_Productos'], $body['Nombre_Obra'], $body['Nombre_Empleado'], $body['Cantidad_Salida'], $body['Cantidad_Propia'],$body['Cantidad_Subalquilada'], $body['ValorUnida'], $body['Fecha_StanBye'], $body['Estado']);
-        echo json_encode("Alquiler Detalle actualizado");
+        echo json_encode("Alquiler Detalle actualizado"); //No sirve ningun Update
         break;
         
     default:

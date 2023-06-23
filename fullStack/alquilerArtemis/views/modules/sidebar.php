@@ -29,7 +29,7 @@
             
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/" class="nav-link <?php if ($alquilerArray[5]== ""):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/" class="nav-link <?php if ($alquilerArray[5]== ""):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Home</p>
                 </a>
@@ -38,7 +38,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/cliente" class="nav-link <?php if ($alquilerArray[5]== "cliente"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/cliente" class="nav-link <?php if ($alquilerArray[5]== "cliente"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Clientes</p>
                 </a>
@@ -46,7 +46,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/empleado" class="nav-link <?php if ($alquilerArray[5]=="empleado"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/empleado" class="nav-link <?php if ($alquilerArray[5]=="empleado"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Empleados</p>
                 </a>
@@ -55,7 +55,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/productos" class="nav-link <?php if ($alquilerArray[5]=="productos"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/productos" class="nav-link <?php if ($alquilerArray[5]=="productos"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Productos</p>
                 </a>
@@ -64,7 +64,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/obra" class="nav-link <?php if ($alquilerArray[5]=="obra"):?> active <?php endif?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/obra" class="nav-link <?php if ($alquilerArray[5]=="obra"):?> active <?php endif?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Obra</p>
                 </a>
@@ -73,7 +73,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/inventario" class="nav-link <?php if ($alquilerArray[5]=="inventario"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/inventario" class="nav-link <?php if ($alquilerArray[5]=="inventario"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Inventario</p>
                 </a>
@@ -82,7 +82,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/alquiler" class="nav-link <?php if ($alquilerArray[5]=="alquiler"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/alquiler" class="nav-link <?php if ($alquilerArray[5]=="alquiler"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Alquiler(Salida)</p>
                 </a>
@@ -91,7 +91,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/alquiler_detalle" class="nav-link <?php if ($alquilerArray[5]=="alquiler_detalle"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/alquiler_detalle" class="nav-link <?php if ($alquilerArray[5]=="alquiler_detalle"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Detalle_Alquiler (Detalle_salida)</p>
                 </a>
@@ -99,7 +99,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/entrada" class="nav-link <?php if ($alquilerArray[5]=="entrada"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/entrada" class="nav-link <?php if ($alquilerArray[5]=="entrada"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Entrada</p>
                 </a>
@@ -107,7 +107,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ArTeM01-043/alqulartemis/fullStack/alquilerArtemis/entrada_detalle" class="nav-link <?php if ($alquilerArray[5]=="entrada_detalle"):?> active <?php endif ?>">
+                <a href="/SkylAb-113/alqulartemis/fullStack/alquilerArtemis/entrada_detalle" class="nav-link <?php if ($alquilerArray[5]=="entrada_detalle"):?> active <?php endif ?>">
                 <i class="bi bi-house-gear"></i>
                   <p>Detalle_Entrada</p>
                 </a>

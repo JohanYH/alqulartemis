@@ -1,5 +1,5 @@
 <?php
-$url = "http://localhost/ArTeM01-043/alqulartemis/fullStack/apiRest/controllers/Empleado.php?op=GetAll";
+$url = "http://localhost/SkylAb-113/alqulartemis/fullStack/apiRest/controllers/Empleado.php?op=GetAll";
 $curl = curl_Init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -10,6 +10,7 @@ curl_close($curl);
 
 <?php
     include_once("new.php");
+    include_once("edit.php")
     
 ?>
 
@@ -44,6 +45,7 @@ curl_close($curl);
                         </td>
                       <td>
                       <form action="" method="POST">
+                                
                                 <input type="hidden" name="edit" value="<?php echo $out->Empleado_ID;?>">
                                 <input type="submit" value="Editar" name="Editar" class="btn btn-warning">
                             </form>

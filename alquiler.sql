@@ -1,4 +1,4 @@
--- Active: 1685036735684@@127.0.0.1@3306@alquilartemis
+-- Active: 1687095416380@@127.0.0.1@3306@alquila
 
 -- SQLBook: Code
 
@@ -112,7 +112,7 @@ CREATE TABLE
         CantidadSalidas VARCHAR (100) NOT NULL,
         CantidadFinal VARCHAR (100) NOT NULL,
         FechaInventario DATE (100) NOT NULL,
-        TipoOperancion VARCHAR (200) NOT NULL,
+        TipoOperancion VARCHAR (100) NOT NULL,
         /* Hacer la liquidación para cada cliente quincenal o mensual de todo lo alquilado por el cliente y gestionar los datos (columnas de tabla) que se consideren necesarios para el cobro debido. */
         FOREIGN KEY (Productos_ID) REFERENCES Productos(Productos_ID)
     );

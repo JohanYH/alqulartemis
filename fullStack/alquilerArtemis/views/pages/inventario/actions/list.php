@@ -1,5 +1,5 @@
 <?php
-$url = "http://localhost/ArTeM01-043/alqulartemis/fullStack/apiRest/controllers/Inventario.php?op=GetAll";
+$url = "http://localhost/SkylAb-113/alqulartemis/fullStack/apiRest/controllers/Inventario.php?op=GetAll";
 $curl = curl_Init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
