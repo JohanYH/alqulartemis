@@ -27,7 +27,7 @@ switch ($_GET["op"]){
         break;
        
     case 'Insert':
-        $datos = $obra->InsertObra($body["Cliente_ID"],$body["Nombre_Obra"]);
+        $datos = $obra->InsertObra($body["Nombre_Cliente"],$body["Nombre_Obra"]);
         echo json_encode("Obra insertado correctamente..");
         break;
          
@@ -37,7 +37,7 @@ switch ($_GET["op"]){
         break;
          
     case 'Update':
-        $datos = $obra->update_Obra($body['Obra_ID'],$body['Cliente_ID'], $body['Nombre_Obra'], $body['Obra_ID']);
+        $datos = $obra->update_Obra($body['Obra_ID'],$body['Nombre_Cliente'], $body['Nombre_Obra'], $body['Obra_ID']);
         echo json_encode("Obra actualizado");
         break;
         

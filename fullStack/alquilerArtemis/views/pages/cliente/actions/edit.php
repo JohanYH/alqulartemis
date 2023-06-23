@@ -22,16 +22,16 @@ if (isset($_POST['editCliente'])) {
 <form action="" method="post">
             <div>
                 <label for="">nombre</label>
-                <input type="text" name="nombre_editado" value="<?php echo $cliente['Nombre_Cliente']; ?>">
+                <input type="text" name="nombre_editado" value="<?php echo $clientes['Nombre_Cliente']; ?>">
             </div>
             <div>
                 <label for="">telefono</label>
-                <input type="number" name="telefono_editado" value="<?php echo $cliente['Telefono_Cliente']; ?>">
+                <input type="number" name="telefono_editado" value="<?php echo $clientes['Telefono_Cliente']; ?>">
             </div>
            
-            <input type="hidden" name="editando_id" value="<?php echo $cliente['Cliente_ID']; ?>">
+            <input type="hidden" name="editando_id" value="<?php echo $clientes['Cliente_ID']; ?>">
             <input type="submit" value="Editar Cliente" name="editarCliente">
-        </form>
+</form>
 <?php } ?>
 <?php
 if (isset($_POST['editarCliente'])) {

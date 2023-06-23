@@ -9,6 +9,7 @@ curl_close($curl);
 ?>
 <?php
     include_once("new.php");
+    include_once("edit.php")
     
 ?>
 
@@ -39,13 +40,11 @@ curl_close($curl);
                             <?php
                               include("delete.php");
                             ?>
-                        </td>
+                      </td>
                       <td>
                       <form action="" method="POST">
                         <input type="hidden" name="edit" value="<?php echo $out->Cliente_ID; ?>">
-                          <input type="submit" value="Editar" name="editCliente" class="btn btn-warning">
-                                
-                               
+                        <input type="submit" value="Editar" name="editCliente" class="btn btn-warning">  
                       </form>
                       </td>
                     </tr>
@@ -53,9 +52,7 @@ curl_close($curl);
                         }
                     ?>
                   </tbody>
+                  
 </table>
-<?php
 
-include("edit.php");
 
-?>

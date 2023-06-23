@@ -27,7 +27,7 @@ switch ($_GET["op"]){
         break;
        
     case 'Insert':
-        $datos = $AlquilerDetalles->InsertAlquiler_Detalle($body["Alquiler_ID"],$body["Productos_ID"],$body["Obra_ID"],$body["Empleado_ID"],$body["Cantidad_Salida"],$body["Cantidad_Propia"],$body["Cantidad_Subalquilada"],$body["ValorUnida"],$body["Fecha_StanBye"],$body["Estado"]);
+        $datos = $AlquilerDetalles->InsertAlquiler_Detalle($body["Fecha_Salida"],$body["Nombre_Productos"],$body["Nombre_Obra"],$body["Nombre_Empleado"],$body["Cantidad_Salida"],$body["Cantidad_Propia"],$body["Cantidad_Subalquilada"],$body["ValorUnida"],$body["Fecha_StanBye"],$body["Estado"]);
         echo json_encode("Detalle Alquiler insertado correctamente..");
         break;
          
@@ -37,7 +37,7 @@ switch ($_GET["op"]){
         break;
          
     case 'Update':
-        $datos = $AlquilerDetalles->update_Alquiler_Detalle($body['Alquiler_Detalle_ID'],$body['Alquiler_ID'], $body['Productos_ID'], $body['Obra_ID'], $body['Empleado_ID'], $body['Cantidad_Salida'], $body['Cantidad_Propia'],$body['Cantidad_Subalquilada'], $body['ValorUnida'], $body['Fecha_StanBye'], $body['Estado']);
+        $datos = $AlquilerDetalles->update_Alquiler_Detalle($body['Alquiler_Detalle_ID'],$body['Fecha_Salida'], $body['Nombre_Productos'], $body['Nombre_Obra'], $body['Nombre_Empleado'], $body['Cantidad_Salida'], $body['Cantidad_Propia'],$body['Cantidad_Subalquilada'], $body['ValorUnida'], $body['Fecha_StanBye'], $body['Estado']);
         echo json_encode("Alquiler Detalle actualizado");
         break;
         

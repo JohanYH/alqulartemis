@@ -27,7 +27,7 @@ switch ($_GET["op"]){
         break;
        
     case 'Insert':
-        $datos = $entradas->InsertEntrada($body["Alquiler_ID"],$body["Empleado_ID"],$body["Cliente_ID"],$body["Fecha_Entrada"],$body["Hora_Entrada"],$body["Observaciones"]);
+        $datos = $entradas->InsertEntrada($body["Fecha_Salida"],$body["Nombre_Empleado"],$body["Nombre_Cliente"],$body["Fecha_Entrada"],$body["Hora_Entrada"],$body["Observaciones"]);
         echo json_encode("Entrada insertado correctamente..");
         break;
          

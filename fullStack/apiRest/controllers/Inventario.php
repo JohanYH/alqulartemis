@@ -27,7 +27,7 @@ switch ($_GET["op"]){
         break;
        
     case 'Insert':
-        $datos = $inventarios->InsertInventario($body["Productos_ID"],$body["CantidadInicial"],$body["CantidadIngresos"],$body["CantidadSalidas"],$body["CantidadFinal"],$body["FechaInventario"],$body["TipoOperancion"]);
+        $datos = $inventarios->InsertInventario($body["Nombre_Productos"],$body["CantidadInicial"],$body["CantidadIngresos"],$body["CantidadSalidas"],$body["CantidadFinal"],$body["FechaInventario"],$body["TipoOperancion"]);
         echo json_encode("Inventario insertado correctamente..");
         break;
          
@@ -37,7 +37,7 @@ switch ($_GET["op"]){
         break;
          
     case 'Update':
-        $datos = $inventarios->update_Invetario($body['Inventario_ID'],$body['Productos_ID'], $body['CantidadInicial'], $body['CantidadIngresos'], $body['CantidadSalidas'], $body['CantidadFinal'], $body['FechaInventario'],$body['TipoOperancion']);
+        $datos = $inventarios->update_Invetario($body['Inventario_ID'],$body['Nombre_Productos'], $body['CantidadInicial'], $body['CantidadIngresos'], $body['CantidadSalidas'], $body['CantidadFinal'], $body['FechaInventario'],$body['TipoOperancion']);
         echo json_encode("Inventario actualizado");
         break;
         

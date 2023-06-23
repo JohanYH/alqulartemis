@@ -27,7 +27,7 @@ switch ($_GET["op"]){
         break;
        
     case 'Insert':
-        $datos = $alquileres->InsertAlquiler($body["Cliente_ID"],$body["Empleado_ID"],$body["Fecha_Salida"],$body["Hora_Salida"],$body["SubtotalPeso"],$body["PlacaTransporte"],$body["Observaciones"]);
+        $datos = $alquileres->InsertAlquiler($body["Nombre_Cliente"],$body["Nombre_Empleado"],$body["Fecha_Salida"],$body["Hora_Salida"],$body["SubtotalPeso"],$body["PlacaTransporte"],$body["Observaciones"]);
         echo json_encode("Alquiler insertado correctamente..");
         break;
          
