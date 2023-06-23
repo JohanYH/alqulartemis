@@ -22,7 +22,8 @@
   <!-- jQuery -->
 <script src="views/assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="views/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="views/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <!-- AdminLTE App -->
 <script src="views/assets/plugins/admintle/js/adminlte.min.js"></script>
 </head>

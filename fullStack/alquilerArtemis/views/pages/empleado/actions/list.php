@@ -1,11 +1,16 @@
 <?php
-$url = "http://localhost/SkylAb-147/alqulartemis/fullStack/apiRest/controllers/Empleado.php?op=GetAll";
+$url = "http://localhost/ArTeM01-043/alqulartemis/fullStack/apiRest/controllers/Empleado.php?op=GetAll";
 $curl = curl_Init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $output = json_decode(curl_exec($curl));
 curl_close($curl);
 
+?>
+
+<?php
+    include_once("new.php");
+    
 ?>
 
 

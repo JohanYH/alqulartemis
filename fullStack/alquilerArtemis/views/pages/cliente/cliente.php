@@ -9,6 +9,7 @@
                 <h3 class="card-title">Clientes</h3>
                   
                 <div class="card-tools">
+                  
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
@@ -20,11 +21,13 @@
                   </div>
                 </div>
               </div>
+              
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0" style="height: 300px;">
                 <?php
                   include_once("actions/list.php")
                 ?>
+                
               </div>
               <!-- /.card-body -->
             </div>
